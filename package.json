@@ -1,0 +1,15 @@
+{
+  "name": "hydra-express-plugin-auth",
+  "version": "0.0.1",
+  "description": "HydraExpressPlugin for auth",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Eric Adum <eric@flywheelsports.com>",
+  "license": "MIT",
+  "dependencies": {
+    "fwsp-jwt-auth": "0.1.0",
+    "hydra-express": "1.3.8"
+  }
+}
