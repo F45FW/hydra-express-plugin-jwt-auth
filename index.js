@@ -18,6 +18,7 @@ class JWTAuthPlugin extends HydraExpressPlugin {
   setHydraExpress(hydraExpress) {
     super.setHydraExpress(hydraExpress);
     hydraExpress.validateJwtToken = () => this.getMiddleware();
+    hydraExpress.getJwtAuth = () => jwtAuth;
   }
   /**
    * @override
