@@ -10,6 +10,8 @@ This plugin does not require a config entry in the `hydra.plugins` section.
 
 Express middleware `hydraExpress.validateJwtToken()` decodes valid, unexpired auth tokens into `req.authToken`, or returns a 401 response otherwise.
 
+These tokens should be in the `authorization` header of the request, as described [here](https://jwt.io/introduction/).
+
 ## Usage
 
 ```javascript
