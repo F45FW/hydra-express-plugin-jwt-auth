@@ -1,6 +1,6 @@
 'use strict';
 
-const HydraExpressPlugin = require('hydra-express/plugin');
+const HydraExpressPlugin = require('hydra-express-plugin');
 const jwtAuth = require('fwsp-jwt-auth');
 
 /**
