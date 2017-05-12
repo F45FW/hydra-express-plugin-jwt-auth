@@ -1,5 +1,5 @@
 {
-  "name": "hydra-express-plugin-auth",
+  "name": "hydra-express-plugin-jwt-auth",
   "version": "0.0.1",
   "description": "HydraExpressPlugin for auth",
   "main": "index.js",

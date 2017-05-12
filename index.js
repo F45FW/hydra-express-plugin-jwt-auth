@@ -4,14 +4,17 @@ const HydraExpressPlugin = require('hydra-express/plugin');
 const jwtAuth = require('fwsp-jwt-auth');
 
 /**
- * @name AuthPlugin
- * @summary HydraExpressPlugin for auth
+ * @name JWTAuthPlugin
+ * @summary HydraExpressPlugin for JWT auth
  * @extends HydraExpressPlugin
  */
-class AuthPlugin extends HydraExpressPlugin {
+class JWTAuthPlugin extends HydraExpressPlugin {
   constructor() {
-    super('logger');
+    super('jwt-auth');
   }
+  /**
+   * @override
+   */
   setHydraExpress(hydraExpress) {
     super.setHydraExpress(hydraExpress);
     hydraExpress.validateJwtToken = () => this.getMiddleware();
@@ -27,10 +30,6 @@ class AuthPlugin extends HydraExpressPlugin {
    * @override
    */
   onServiceReady() { /*noop*/ }
-  /**
-   * @override
-   */
-  configChanged(opts) { /*noop*/ }
   /**
   * @name getMiddleware
   * @summary Express middleware to validate a JWT sent via the req.authorization header
@@ -73,4 +72,4 @@ class AuthPlugin extends HydraExpressPlugin {
   }
 }
 
-module.exports = AuthPlugin;
+module.exports = JWTAuthPlugin;
