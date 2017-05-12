@@ -1,4 +1,4 @@
-# hydra-express-plugin-auth
+# hydra-express-plugin-jwt-auth
 
 ## Summary
 
